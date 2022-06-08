@@ -24,6 +24,7 @@ let run = async () => {
     console.log("Initial commit done");
 
     let date = new Date(START_DATE_STRING);
+    let dateStr = date.toISOString();
 
     let binaryStringPixelMap
     for (let char of STRING) {
@@ -42,7 +43,7 @@ let run = async () => {
 
         let dateSkip = 1
         date.setDate(date.getDate() + dateSkip);
-        let dateStr = date.toISOString();
+        dateStr = date.toISOString();
         console.log(dateStr);
     }
 
