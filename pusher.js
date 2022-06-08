@@ -9,7 +9,7 @@ const MIN_COMMITS_PER_DAY = 1;
 const MAX_COMMITS_PER_DAY = 10;
 const NUM_COMMITS = 100
 
-const STRING = "x"
+const STRING = "afrin"
 
 const options = {
     baseDir: process.cwd(), binary: "git", maxConcurrentProcesses: 6,
@@ -31,6 +31,7 @@ let run = async () => {
         binaryStringPixelMap = getCharBinaryPixelMap(char)
     }
 
+    let numberOfCommits = 0
     for (let i = 0; i < binaryStringPixelMap.length; i++) {
         if (binaryStringPixelMap[i] === '1') {
             for (let j = 0; j < NUM_COMMITS; j++) {
@@ -39,6 +40,7 @@ let run = async () => {
                 await git.add("./*");
                 await git.commit("Automated - X", {"--date": dateStr});
             }
+            numberOfCommits += NUM_COMMITS
         }
 
         let dateSkip = 1
@@ -46,6 +48,8 @@ let run = async () => {
         dateStr = date.toISOString();
         console.log(dateStr);
     }
+
+    console.log("num of commits -> " + numberOfCommits)
 
     //   await git.push();
 };
@@ -60,7 +64,7 @@ let getCharBinaryPixelMap = (char) => {
     let letterToBinaryString7x7 = ""
     for (let i = 56; i > 0; i--) {
         if (i % 8 !== 0) {
-            letterToBinaryString7x7 = letterToBinaryString[i]
+            letterToBinaryString7x7 += letterToBinaryString[i]
         }
     }
 
