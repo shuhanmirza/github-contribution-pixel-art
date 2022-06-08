@@ -7,7 +7,7 @@ const DATA_FILE_PATH = "./data.txt";
 const START_DATE_STRING = "2021-06-06";
 const MIN_COMMITS_PER_DAY = 1;
 const MAX_COMMITS_PER_DAY = 10;
-const NUM_COMMITS = 100
+const NUM_COMMITS = 20
 
 const STRING = "afrin"
 
@@ -26,9 +26,9 @@ let run = async () => {
     let date = new Date(START_DATE_STRING);
     let dateStr = date.toISOString();
 
-    let binaryStringPixelMap
+    let binaryStringPixelMap = ""
     for (let char of STRING) {
-        binaryStringPixelMap = getCharBinaryPixelMap(char)
+        binaryStringPixelMap += getCharBinaryPixelMap(char)
     }
 
     let numberOfCommits = 0
