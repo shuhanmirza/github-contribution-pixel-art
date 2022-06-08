@@ -1,0 +1,23 @@
+{
+  "name": "main-acc-push-test-1",
+  "version": "0.0.1",
+  "description": "",
+  "main": "pusher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shafayet-bk/main-acc-push-test-1.git"
+  },
+  "author": "",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/shafayet-bk/main-acc-push-test-1/issues"
+  },
+  "homepage": "https://github.com/shafayet-bk/main-acc-push-test-1#readme",
+  "private": true,
+  "dependencies": {
+    "simple-git": "^3.7.1"
+  }
+}
