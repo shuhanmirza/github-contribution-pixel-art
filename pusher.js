@@ -35,12 +35,13 @@ const letterHexList = [
 const letterMatrices = {}
 
 const DATA_FILE_PATH = "./data.txt";
-const START_DATE_STRING = "2015-09-13";
-const MIN_COMMITS_PER_DAY = 1;
-const MAX_COMMITS_PER_DAY = 10;
 const NUM_COMMITS = 20
 
-const STRING = "r"
+// -------------------
+const START_DATE_STRING = "2016-02-14"; // from the point the art will start from. the upper left pixel of contribution graph
+const STRING = "hi" // Input what you want to print here
+// -------------------
+
 
 const options = {
     baseDir: process.cwd(), binary: "git", maxConcurrentProcesses: 6,
@@ -149,7 +150,7 @@ let get7x7BinaryString = (letterBinaryString) => {
     return letterBinaryString7x7
 }
 
-function nextChar(c) {
+let nextChar = (c) => {
     return String.fromCharCode(c.charCodeAt(0) + 1);
 }
 
