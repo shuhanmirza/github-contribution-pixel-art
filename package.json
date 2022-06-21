@@ -18,6 +18,7 @@
   "homepage": "https://github.com/shafayet-bk/main-acc-push-test-1#readme",
   "private": true,
   "dependencies": {
-    "simple-git": "^3.7.1"
+    "simple-git": "^3.7.1",
+    "mathjs": "^10.6.1"
   }
 }
