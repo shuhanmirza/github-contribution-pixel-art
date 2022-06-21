@@ -6,7 +6,7 @@ Simple Javascript solution to write in your GitHub contribution graph.
 - install required dependencies with npm
 - update variables according to your need in `pusher.js`
 ```javascript
-const START_DATE_STRING = "2015-09-13"; // from the point the art will start from. the upper left pixel of contribution graph
+const START_DATE_STRING = "2016-02-14"; // from the point the art will start from. the upper left pixel of contribution graph
 const STRING = "hi" // Input what you want to print here
 ```
 - run pusher.js
@@ -18,6 +18,8 @@ const STRING = "hi" // Input what you want to print here
 $ git push
 ```
 - checkout your contribution graph
+
+![img.png](img.png)
 
 ### How it works
 The binary maps of the letters are kept in `letterHexList` in hexadecimal format. It was prepared using [LED Matrix Editor](https://xantorohara.github.io/led-matrix-editor/).
